@@ -29,6 +29,7 @@
 
 
 <script>
+
     function renderTemplates() {
         const $body = $('#template-body');
 
@@ -52,21 +53,21 @@
                     $tdActions.append($('<button>', {
                         type: 'button',
                         class: 'btn btn-sm btn-dark mx-1',
-                        text: 'detalii', 'data-action-view': '',
+                        text: 'Detalii', 'data-action-view': '',
                         'data-id': id,
                     }));
 
                     $tdActions.append($('<button>', {
                         type: 'button',
                         class: 'btn btn-sm btn-warning mx-1',
-                        text: 'modifica', 'data-action-edit': '',
+                        text: 'Modifica', 'data-action-edit': '',
                         'data-id': id,
                     }));
 
                     $tdActions.append($('<button>', {
                         type: 'button',
                         class: 'btn btn-sm btn-success mx-1',
-                        text: 'asociaza cu', 'data-action-assign': '',
+                        text: 'Asociaza', 'data-action-assign': '',
                         'data-id': id,
                     }));
 
@@ -79,7 +80,30 @@
 
     renderTemplates();
 
-    $(document).on('click', 'button[data-action-view]', () => notify('In progress `view` ԅ(¯﹃¯ԅ)'));
+    $(document).on('click', 'button[data-action-view]', function () {
+        const $this = $(this);
+        const $modal = $('#modal-view-template');
+        const templateId = $this.data('id');
+
+        fetch('api/get-template-detailed.php?template_id=' + templateId)
+            .then(response => response.json())
+            .then(data => {
+                const {template, relation} = data;
+                const {interval} = template;
+
+                $modal.find('td[data-id]').text(template.id)
+                $modal.find('td[data-name]').text(template.name)
+                $modal.find('td[data-type]').text(db.scheduleType[template.type].name);
+
+                if (["1", "2", "3"].indexOf(template.type) !== -1) {
+                    $modal.find('td[data-schedule]').html(renderSchedulerTable(template.interval))
+                } else {
+                    $modal.find('td[data-schedule]').html(renderSchedulerTableNoShift(template.interval))
+                }
+
+                $modal.modal('show');
+            });
+    });
 
     $(document).on('click', 'button[data-action-edit]', () => notify('In progress `edit` ԅ(¯﹃¯ԅ)'));
 
@@ -114,11 +138,12 @@
                 $modal.modal('show');
             });
     });
-</script>
 
+</script>
 
 <?php include_once 'layouts/modal-add-template.php' ?>
 <?php include_once 'layouts/modal-assign-with.php' ?>
+<?php include_once 'layouts/modal-view-template.php' ?>
 <?php include_once 'layouts/toast-notification.php' ?>
 
 </body>

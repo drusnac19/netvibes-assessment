@@ -8,7 +8,7 @@ $templates = (array)json_decode($templates, true);
 
 $data = $_POST;
 $data['interval'] = $data['interval'][$data['type']] ?? [];
-$data['id'] = substr(time(), 0, 5);
+$data['id'] = rand(1000,9999);
 
 $templates[] = $data;
 

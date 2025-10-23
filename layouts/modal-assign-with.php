@@ -56,7 +56,6 @@
         db.role.forEach(({id, name}) => $select.role.append($('<option>', {value: id, text: name})));
         db.team.forEach(({id, name}) => $select.team.append($('<option>', {value: id, text: name})));
 
-
         $form.on('submit', function (ev) {
             ev.preventDefault();
 

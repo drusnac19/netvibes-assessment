@@ -21,7 +21,7 @@ $week = [
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Denumire</label>
-                        <input name="name" type="text" class="form-control" required>
+                        <input name="name" type="text" class="form-control"  required>
                     </div>
 
                     <div class="mb-3">
@@ -68,8 +68,8 @@ $week = [
                                 <?php foreach ($week as $id => $name): ?>
                                     <tr>
                                         <td><?= $name ?></td>
-                                        <td><input type="time" name="interval[1][1][<?= $id ?>][work][start]" data-work-start> - <input type="time" name="interval[1][1][<?= $id ?>][work][end]" data-work-end></td>
-                                        <td><input type="time" name="interval[1][1][<?= $id ?>][break][start]" data-break-start> - <input type="time" name="interval[1][1][<?= $id ?>][break][end]" data-break-end></td>
+                                        <td><input type="time" step="600"  name="interval[1][1][<?= $id ?>][work][start]" data-work-start> - <input type="time" step="600"  name="interval[1][1][<?= $id ?>][work][end]" data-work-end></td>
+                                        <td><input type="time" step="600"  name="interval[1][1][<?= $id ?>][break][start]" data-break-start> - <input type="time" step="600"  name="interval[1][1][<?= $id ?>][break][end]" data-break-end></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>
@@ -90,14 +90,14 @@ $week = [
                                     <tr>
                                         <td><?= $name ?></td>
                                         <td>Tura 1</td>
-                                        <td><input type="time" name="interval[2][1][<?= $id ?>][work][start]" data-work-start> - <input type="time" name="interval[2][1][<?= $id ?>][work][end]" data-work-end></td>
-                                        <td><input type="time" name="interval[2][1][<?= $id ?>][break][start]" data-break-start> - <input type="time" name="interval[2][1][<?= $id ?>][break][end]" data-break-end></td>
+                                        <td><input type="time" step="600"  name="interval[2][1][<?= $id ?>][work][start]" data-work-start> - <input type="time" step="600"  name="interval[2][1][<?= $id ?>][work][end]" data-work-end></td>
+                                        <td><input type="time" step="600"  name="interval[2][1][<?= $id ?>][break][start]" data-break-start> - <input type="time" step="600"  name="interval[2][1][<?= $id ?>][break][end]" data-break-end></td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>Tura 2</td>
-                                        <td><input type="time" name="interval[2][2][<?= $id ?>][work][start]" data-work-start> - <input type="time" name="interval[2][2][<?= $id ?>][work][end]" data-work-end></td>
-                                        <td><input type="time" name="interval[2][2][<?= $id ?>][break][start]" data-break-start> - <input type="time" name="interval[2][2][<?= $id ?>][break][end]" data-break-end></td>
+                                        <td><input type="time" step="600"  name="interval[2][2][<?= $id ?>][work][start]" data-work-start> - <input type="time" step="600"  name="interval[2][2][<?= $id ?>][work][end]" data-work-end></td>
+                                        <td><input type="time" step="600"  name="interval[2][2][<?= $id ?>][break][start]" data-break-start> - <input type="time" step="600"  name="interval[2][2][<?= $id ?>][break][end]" data-break-end></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>
@@ -118,20 +118,20 @@ $week = [
                                     <tr>
                                         <td><?= $name ?></td>
                                         <td>Tura 1</td>
-                                        <td><input type="time" name="interval[3][1][<?= $id ?>][work][start]" data-work-start> - <input type="time" name="interval[3][1][<?= $id ?>][work][end]" data-work-end></td>
-                                        <td><input type="time" name="interval[3][1][<?= $id ?>][break][start]" data-break-start> - <input type="time" name="interval[3][1][<?= $id ?>][break][end]" data-break-end></td>
+                                        <td><input type="time" step="600"  name="interval[3][1][<?= $id ?>][work][start]" data-work-start> - <input type="time" step="600"  name="interval[3][1][<?= $id ?>][work][end]" data-work-end></td>
+                                        <td><input type="time" step="600"  name="interval[3][1][<?= $id ?>][break][start]" data-break-start> - <input type="time" step="600"  name="interval[3][1][<?= $id ?>][break][end]" data-break-end></td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>Tura 2</td>
-                                        <td><input type="time" name="interval[3][2][<?= $id ?>][work][start]" data-work-start> - <input type="time" name="interval[3][2][<?= $id ?>][work][end]" data-work-end></td>
-                                        <td><input type="time" name="interval[3][2][<?= $id ?>][break][start]" data-break-start> - <input type="time" name="interval[3][2][<?= $id ?>][break][end]" data-break-end></td>
+                                        <td><input type="time" step="600"  name="interval[3][2][<?= $id ?>][work][start]" data-work-start> - <input type="time" step="600"  name="interval[3][2][<?= $id ?>][work][end]" data-work-end></td>
+                                        <td><input type="time" step="600"  name="interval[3][2][<?= $id ?>][break][start]" data-break-start> - <input type="time" step="600"  name="interval[3][2][<?= $id ?>][break][end]" data-break-end></td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>Tura 3</td>
-                                        <td><input type="time" name="interval[3][3][<?= $id ?>][work][start]" data-work-start> - <input type="time" name="interval[3][3][<?= $id ?>][work][end]" data-work-end></td>
-                                        <td><input type="time" name="interval[3][3][<?= $id ?>][break][start]" data-break-start> - <input type="time" name="interval[3][3][<?= $id ?>][break][end]" data-break-end></td>
+                                        <td><input type="time" step="600"  name="interval[3][3][<?= $id ?>][work][start]" data-work-start> - <input type="time" step="600"  name="interval[3][3][<?= $id ?>][work][end]" data-work-end></td>
+                                        <td><input type="time" step="600"  name="interval[3][3][<?= $id ?>][break][start]" data-break-start> - <input type="time" step="600"  name="interval[3][3][<?= $id ?>][break][end]" data-break-end></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>
@@ -181,8 +181,8 @@ $week = [
                 <?php endforeach; ?>
             </select>
         </td>
-        <td><input type="time" data-work-start> - <input type="time" data-work-end></td>
-        <td><input type="time" data-break-start> - <input type="time" data-break-end></td>
+        <td><input type="time" step="600"  data-work-start> - <input type="time" step="600"  data-work-end></td>
+        <td><input type="time" step="600"  data-break-start> - <input type="time" step="600"  data-break-end></td>
         <td>
             <button type="button" class="btn btn-outline-light btn-sm" data-btn-remove-template-row>❌</button>
         </td>
@@ -265,10 +265,16 @@ $week = [
             const totalRows = $tbody.children().length;
 
 
-            $workStart.attr('name', `interval[4][${totalRows}][${dayName}][work][start]`);
-            $workEnd.attr('name', `interval[4][${totalRows}][${dayName}][work][end]`);
-            $breakStart.attr('name', `interval[4][${totalRows}][${dayName}][break][end]`);
-            $breakEnd.attr('name', `interval[4][${totalRows}][${dayName}][break][end]`);
+            $day.attr('name', `interval[4][${totalRows}][day]`);
+            $workStart.attr('name', `interval[4][${totalRows}][work][start]`);
+            $workEnd.attr('name', `interval[4][${totalRows}][work][end]`);
+            $breakStart.attr('name', `interval[4][${totalRows}][break][start]`);
+            $breakEnd.attr('name', `interval[4][${totalRows}][break][end]`);
+            //
+            // $workStart.attr('name', `interval[4][${totalRows}][${dayName}][work][start]`);
+            // $workEnd.attr('name', `interval[4][${totalRows}][${dayName}][work][end]`);
+            // $breakStart.attr('name', `interval[4][${totalRows}][${dayName}][break][start]`);
+            // $breakEnd.attr('name', `interval[4][${totalRows}][${dayName}][break][end]`);
 
             $tbody.append($root);
 
@@ -298,8 +304,6 @@ $week = [
                 method: 'POST',
                 data: $form.serialize(),
                 success: function (response) {
-                    console.log('Form submitted: ', response);
-
                     $modal.modal('hide');
 
                     notify('Sablon creat cu succes!');
