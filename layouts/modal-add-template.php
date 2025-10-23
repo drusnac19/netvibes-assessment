@@ -193,7 +193,7 @@ $week = [
     function initValidationIntervals() {
 
         // Currently disabled since validation is a complex job
-        // and currently is out of scope. ༼ つ ◕_◕ ༽つ
+        // and is out of scope. ༼ つ ◕_◕ ༽つ
         return;
 
         // Data validation
@@ -270,11 +270,6 @@ $week = [
             $workEnd.attr('name', `interval[4][${totalRows}][work][end]`);
             $breakStart.attr('name', `interval[4][${totalRows}][break][start]`);
             $breakEnd.attr('name', `interval[4][${totalRows}][break][end]`);
-            //
-            // $workStart.attr('name', `interval[4][${totalRows}][${dayName}][work][start]`);
-            // $workEnd.attr('name', `interval[4][${totalRows}][${dayName}][work][end]`);
-            // $breakStart.attr('name', `interval[4][${totalRows}][${dayName}][break][start]`);
-            // $breakEnd.attr('name', `interval[4][${totalRows}][${dayName}][break][end]`);
 
             $tbody.append($root);
 

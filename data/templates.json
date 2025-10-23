@@ -106,5 +106,84 @@
             }
         ],
         "id": 5363
+    },
+    {
+        "name": "Test",
+        "type": "1",
+        "interval": {
+            "1": {
+                "mo": {
+                    "work": {
+                        "start": "00:00",
+                        "end": "05:00"
+                    },
+                    "break": {
+                        "start": "",
+                        "end": ""
+                    }
+                },
+                "tu": {
+                    "work": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "break": {
+                        "start": "",
+                        "end": ""
+                    }
+                },
+                "we": {
+                    "work": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "break": {
+                        "start": "",
+                        "end": ""
+                    }
+                },
+                "th": {
+                    "work": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "break": {
+                        "start": "",
+                        "end": ""
+                    }
+                },
+                "fr": {
+                    "work": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "break": {
+                        "start": "",
+                        "end": ""
+                    }
+                },
+                "sa": {
+                    "work": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "break": {
+                        "start": "",
+                        "end": ""
+                    }
+                },
+                "su": {
+                    "work": {
+                        "start": "",
+                        "end": ""
+                    },
+                    "break": {
+                        "start": "",
+                        "end": ""
+                    }
+                }
+            }
+        },
+        "id": 2571
     }
 ]
